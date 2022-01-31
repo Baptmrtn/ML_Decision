@@ -48,3 +48,11 @@ def Types_of_learning():
 		else:
 			print("Erreur, tu n'a pas sélectionner 1 ou 2")
 	return TypeML
+
+
+def Select_feature_graph(features_name):
+	for i,name in enumerate(features_name):
+		print(f"# {i+1} : {name} ")
+	InputGraphNumber = input("Sélectionner les colonnes à comparer (minimum 2) :\n~ Note : séparer les résultats d'une virgule (i.e : 2,4,6)\n# ")
+	ListFeatSelec = [int(i)-1 for i in InputGraphNumber.split(",")]
+	return ListFeatSelec
