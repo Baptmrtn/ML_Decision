@@ -29,3 +29,22 @@ def OpenExcel():
 	else:
 		pass
 	return data
+
+#####################
+#### Data choice ####
+#####################
+
+#PROBLEM MACHINE LEARNING
+def Types_of_learning():
+	VarCheck = False
+	while VarCheck != True:
+		print("Sélectionner : \n- Supervised Machine Learning : 1 \n- Unsupervised Machine Learning : 2 \n(Entrez QUIT si vous souhaitez quitter le programme)\nVotre Choix :")
+		TypeML = input()
+		if int(TypeML) == 1 or int(TypeML) == 2:
+			print("Validate")
+			VarCheck = True
+		elif TypeML == "QUIT":
+			exit()
+		else:
+			print("Erreur, tu n'a pas sélectionner 1 ou 2")
+	return TypeML
